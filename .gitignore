@@ -46,3 +46,11 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+functions/.secret.local
+# Local AI tooling files
+.agents/
+skills-lock.json
+
+# Firebase local secrets
+functions/.secret.local

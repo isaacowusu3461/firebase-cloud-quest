@@ -1,0 +1,27 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Signed-in students can view the daily challenges.
+    // Only the backend should create or change challenges.
+    match /challenges/{challengeId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // Students can view their own progress, but they cannot
+    // change their points or badges directly from Flutter.
+    match /users/{userId}/progress/{progressId} {
+      allow read: if request.auth != null
+                  && request.auth.uid == userId;
+      allow write: if false;
+    }
+
+    // Device records are not accessible directly by clients.
+    match /users/{userId}/devices/{deviceId} {
+      allow read, write: if false;
+    }
+  }
+}
