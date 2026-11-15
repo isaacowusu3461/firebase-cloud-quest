@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "344009419638",
+    "project_id": "fir-cloud-quest",
+    "storage_bucket": "fir-cloud-quest.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344009419638:android:f5df580518796a48fee857",
+        "android_client_info": {
+          "package_name": "com.example.firebase_cloud_quest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb95BMO1ooHybIcxa0sup6cHQYwcSXrTA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
